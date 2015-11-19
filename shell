@@ -1,0 +1,18 @@
+zone dmz {
+    from private {
+        firewall {
+            name 1
+            name 2
+        }
+    }
+    from dmz {
+        firewall {
+            name 2
+        }
+    }
+    interface eth1
+    interface eth2
+}
+zone private {
+    interface eth0
+}
